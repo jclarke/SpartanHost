@@ -16,8 +16,16 @@ module.exports = function(grunt) {
         compress: false
       },
       app: {
-        src: ['.tmp/**/*.js'],
-        dest: 'app/js/application.js',
+        files: [{
+          expand: true,
+          cwd: '.tmp/js',
+          src: ['*.js'],
+          dest: 'app/js',
+          ext: '.js'
+        }, {
+          src: ['bower_components/bootstrap/dist/js/bootstrap.js'],
+          dest: 'app/js/bootstrap.js'
+        }]
       }
     },
     less: {
@@ -44,8 +52,7 @@ module.exports = function(grunt) {
           expand: true,
           cwd: 'src',
           src: ['**/*.html'],
-          dest: 'app',
-          ext: 'html'
+          dest: 'app'
         }]
       }
     },
@@ -65,7 +72,10 @@ module.exports = function(grunt) {
     concurrent: {
       build: ['coffee', 'less', 'htmlmin', 'imagemin']
     },
-    clean: ['.tmp']
+    clean: {
+      pre: ['app'],
+      post: ['.tmp']
+    }
   });
 
   grunt.loadNpmTasks('grunt-concurrent');
@@ -76,6 +86,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-htmlmin');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
 
-  grunt.registerTask('default', ['concurrent', 'uglify', 'clean']);
+  grunt.registerTask('default', ['clean:pre', 'concurrent', 'uglify', 'clean:post']);
 
 };
