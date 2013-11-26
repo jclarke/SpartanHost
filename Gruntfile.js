@@ -43,18 +43,18 @@ module.exports = function(grunt) {
         }]
       }
     },
-    htmlmin: {
-      app: {
-        options: {
-          removeComments: true,
-          collapseWhitespace: true,
-          removeRedundantAttributes: true,
-          collapseBooleanAttributes: true
-        },
+    copy: {
+      template: {
         files: [{
           expand: true,
-          cwd: 'src',
-          src: ['**/*.html'],
+          src: ['src/*.mustache'],
+          dest: 'app/template'
+        }]
+      },
+      php: {
+        files: [{
+          expand: true,
+          src: ['php/**/*.*'],
           dest: 'app'
         }]
       }
@@ -73,7 +73,8 @@ module.exports = function(grunt) {
       }
     },
     concurrent: {
-      build: ['coffee', 'less', 'htmlmin', 'imagemin']
+      build: ['coffee', 'less', 'copy:template', 'imagemin'],
+      postbuild: ['copy:php', 'uglify']
     },
     clean: {
       pre: ['app'],
@@ -86,9 +87,9 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-clean');
-  grunt.loadNpmTasks('grunt-contrib-htmlmin');
+  grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
 
-  grunt.registerTask('default', ['clean:pre', 'concurrent', 'uglify', 'clean:post']);
+  grunt.registerTask('default', ['clean:pre', 'concurrent:build', 'concurrent:postbuild', 'clean:post']);
 
 };

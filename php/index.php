@@ -22,7 +22,8 @@ $app->container->singleton('mustache', function () {
 // Helper functiont to render templates
 function renderTemplate($name, $data = array()) {
 	$data['currentRoute'] = $app->router()->getCurrentRoute();
-	return $app->mustache->render($name, $data);
+	$tpl = $app->mustache->loadTemplate('template/' + $name);
+	return $tpl->render($data);
 }
 
 // Route to the homepage...
@@ -69,7 +70,7 @@ $app->get('/stats', function ($name) {
 			$ram = round($results[0]['n'] / 1024);
 
 			// And le results!
-			$data = compact('clients', 'players', 'ram')
+			$data = compact('clients', 'players', 'ram');
 
 			// Store that in the cache and return it
 			$cache->set('stats', $data);
