@@ -46,7 +46,10 @@ module.exports = function(grunt) {
     htmlmin: {
       app: {
         options: {
-          removeComments: true
+          removeComments: true,
+          collapseWhitespace: true,
+          removeRedundantAttributes: true,
+          collapseBooleanAttributes: true
         },
         files: [{
           expand: true,
