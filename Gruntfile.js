@@ -21,17 +21,49 @@ module.exports = function(grunt) {
       }
     },
     less: {
-      production: {
+      app: {
         options: {
           yuicompress: true,
           concat: false
         },
-        src: 'src/css/*.less',
-        dest: 'app/css',
+        files: [{
+          expand: true,
+          cwd: 'src/css',
+          src: ['*.less'],
+          dest: 'app/css',
+          ext: '.css'
+        }]
+      }
+    },
+    htmlmin: {
+      app: {
+        options: {
+          removeComments: true
+        },
+        files: [{
+          expand: true,
+          cwd: 'src',
+          src: ['**/*.html'],
+          dest: 'app',
+          ext: 'html'
+        }]
+      }
+    },
+    imagemin: {
+      app: {
+        options: {
+          removeComments: true
+        },
+        files: [{
+          expand: true,
+          cwd: 'src/img',
+          src: ['{,*/}*.{png,jpg,jpeg}'],
+          dest: 'app/img',
+        }]
       }
     },
     concurrent: {
-      build: ['coffee', 'less']
+      build: ['coffee', 'less', 'htmlmin', 'imagemin']
     },
     clean: ['.tmp']
   });
@@ -41,6 +73,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-clean');
+  grunt.loadNpmTasks('grunt-contrib-htmlmin');
+  grunt.loadNpmTasks('grunt-contrib-imagemin');
 
   grunt.registerTask('default', ['concurrent', 'uglify', 'clean']);
 

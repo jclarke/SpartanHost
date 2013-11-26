@@ -1,5 +1,5 @@
 {
-  "name": "spacecubehosting",
+  "name": "spartanhost",
   "version": "0.0.0",
   "description": "",
   "main": "Gruntfile.js",
@@ -9,15 +9,17 @@
     "grunt-contrib-clean": "~0.4.0",
     "grunt-contrib-coffee": "~0.4.0",
     "grunt-contrib-less": "~0.5.0",
-    "grunt-contrib-uglify": "~0.2.6"
+    "grunt-contrib-uglify": "~0.2.6",
+    "grunt-contrib-imagemin": "~0.4.0",
+    "grunt-contrib-htmlmin": "~0.5.4",
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/connor4312/spacecubehosting"
+    "url": "https://github.com/connor4312/SpartanHost"
   },
   "author": "Connor Peet <connor@connorpeet.com>",
   "license": "Proprietary",
   "bugs": {
-    "url": "https://github.com/connor4312/spacecubehosting/issues"
+    "url": "https://github.com/connor4312/SpartanHost/issues"
   }
 }

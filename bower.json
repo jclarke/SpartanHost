@@ -1,12 +1,12 @@
 {
-  "name": "spacecubehosting",
+  "name": "spartanhost",
   "version": "0.0.0",
   "authors": [
     "Connor Peet <connor@connorpeet.com>"
   ],
   "main": "Gruntfile.js",
   "license": "Proprietary",
-  "homepage": "https://github.com/connor4312/spacecubehosting",
+  "homepage": "https://github.com/connor4312/SpartanHost",
   "private": true,
   "ignore": [
     "**/.*",
