@@ -12,6 +12,8 @@ $database = array(
 	'password'  => 'your-password',
 );
 
+$baseUrl = 'http://localhost/~connor/131126spartan/app/';
+
 // Regsiter a singleton of the Mustache engine, and tell it to cache
 $app->container->singleton('mustache', function () {
 	return new Mustache_Engine(array(
@@ -22,9 +24,14 @@ $app->container->singleton('mustache', function () {
 
 // Helper functiont to render templates
 function renderTemplate($name, $data = array()) {
-	global $app;
+	global $app, $baseUrl;
 
-	$data['currentRoute'] = $app->router()->getCurrentRoute();
+	$data += array(
+		'currentRoute' => $app->router()->getCurrentRoute(),
+		'baseUrl' => $baseUrl . 'index.php',
+		'baseDir' => $baseUrl,
+	);
+
 	return $app->mustache->loadTemplate($name)->render($data);
 }
 
