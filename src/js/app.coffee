@@ -4,7 +4,7 @@ define [
 ], (Router, Socket) ->
 
 	statsAjax = ->
-		stats = $ 'js-stater'
+		stats = $ '#js-stater'
 		if stats.length isnt 1 then return false
 
 		$.ajax

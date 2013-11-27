@@ -15,20 +15,27 @@ $database = array(
 // Regsiter a singleton of the Mustache engine, and tell it to cache
 $app->container->singleton('mustache', function () {
 	return new Mustache_Engine(array(
-		'cache' => 'storage/mustache'
+		'cache' => 'storage/mustache',
+		'loader' => new Mustache_Loader_FilesystemLoader(dirname(__FILE__) . '/template')
 	));
 });
 
 // Helper functiont to render templates
 function renderTemplate($name, $data = array()) {
+	global $app;
+
 	$data['currentRoute'] = $app->router()->getCurrentRoute();
-	$tpl = $app->mustache->loadTemplate('template/' + $name);
-	return $tpl->render($data);
+	return $app->mustache->loadTemplate($name)->render($data);
 }
 
 // Route to the homepage...
-$app->get('/', function ($name) {
-	renderTemplate($index);
+$app->get('/', function () {
+	echo renderTemplate('index');
+});
+
+// Terms of Service
+$app->get('/terms', function () {
+	echo renderTemplate('terms');
 });
 
 // AJAX for stats on the homepage
@@ -78,7 +85,7 @@ $app->get('/stats', function ($name) {
 		}
 	}
 
-	return json_encode(getStat());
+	echo json_encode(getStat());
 });
 
 // Run the application!

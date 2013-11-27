@@ -47,7 +47,8 @@ module.exports = function(grunt) {
       template: {
         files: [{
           expand: true,
-          src: ['src/*.mustache'],
+          cwd: 'src',
+          src: ['*.mustache'],
           dest: 'app/template'
         }]
       },
