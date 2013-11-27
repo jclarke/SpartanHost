@@ -45,9 +45,14 @@ $app->get('/terms', function () {
 	echo renderTemplate('terms');
 });
 
-// Terms of Service
+// FAQ Page
 $app->get('/faq', function () {
 	echo renderTemplate('faq');
+});
+
+// IRC chat
+$app->get('/irc', function () {
+	echo renderTemplate('irc');
 });
 
 // AJAX for stats on the homepage
