@@ -45,6 +45,11 @@ $app->get('/terms', function () {
 	echo renderTemplate('terms');
 });
 
+// Terms of Service
+$app->get('/faq', function () {
+	echo renderTemplate('faq');
+});
+
 // AJAX for stats on the homepage
 $app->get('/stats', function ($name) {
 

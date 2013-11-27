@@ -273,3 +273,41 @@ footer {
 		z-index: -10;
 	}
 }
+
+.faqbox {
+
+	&.active {
+		
+		box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+		margin-bottom:5px;
+		
+		.head {
+			background: @theme-primary;
+			color: #fff;
+			padding: 0 10px;
+			border-radius: 5px 5px 0 0;
+			.transition(0.3s);
+
+			&:hover {
+				color: #fff;
+			}
+		}
+	}
+
+	.body {
+		display: none;
+		padding: 5px;
+		margin: 0px;
+	}
+	.head {
+		font-size: 1.2em;
+		line-height: 2em;
+		color: #666;
+		cursor: pointer;
+		.transition(0.3s);
+
+		&:hover {
+			color: #000;
+		}
+	}
+}

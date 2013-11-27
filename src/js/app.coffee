@@ -14,7 +14,13 @@ define [
 				for key, value of data
 					$('[data-stat="' + key + '"]', stats).text value
 
+	faqboxes = ->
+		$('.faqbox').on 'click', ->
+			$(this).toggleClass 'active'
+			$('.body', this).stop().slideToggle 300
+
 	return {
 		initialize: ->
 			statsAjax()
+			faqboxes()
 	}
