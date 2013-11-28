@@ -179,7 +179,6 @@
             Copyright 2013 SpartanHost. <a href="http://vector-media.net/">Designed</a>. Powered by <a href="http://www.multicraft.org">Multicraft Control Panel</a>
         </div>
     </footer>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.2/js/bootstrap.min.js" type="text/javascript"></script>
 </div><!-- page -->
 </div>
