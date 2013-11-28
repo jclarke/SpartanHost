@@ -44,7 +44,7 @@
 </head>
 
 <body>
-
+    <div class="pagetrimmer">
     <div class="container">
         <nav class="main"> 
             <a class="navbar-brand col-md-2" href="http://spartanhost.net">SpartanHost</a>

@@ -18,50 +18,52 @@
 	</head>
 
 	<body>
-<!--Start of Zopim Live Chat Script-->
-{literal}<script type="text/javascript">
-window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
-d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
-_.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute('charset','utf-8');
-$.src='//v2.zopim.com/?1GsTVWooV1Sx6Q4uCrt4xLs1t67Qwdma';z.t=+new Date;$.
-type='text/javascript';e.parentNode.insertBefore($,e)})(document,'script');
-</script>{/literal}
+	<!--Start of Zopim Live Chat Script-->
+	{literal}<script type="text/javascript">
+	window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
+	d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
+	_.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute('charset','utf-8');
+	$.src='//v2.zopim.com/?1GsTVWooV1Sx6Q4uCrt4xLs1t67Qwdma';z.t=+new Date;$.
+	type='text/javascript';e.parentNode.insertBefore($,e)})(document,'script');
+	</script>{/literal}
 {$headeroutput}
-	<div class="container">
-		<nav class="main"> 
-			<a class="navbar-brand col-md-2" href="http://spartanhost.net">SpartanHost</a>
-			<div class="col-md-7">	
-				<ul class="nav navbar-nav navbar-right white bar">
-					<li><a href="http://spartanhost.net">Home</a></li>
-					<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Plans <b class="caret"></b></a>
-						<ul class="dropdown-menu">
-							<li><a href="https://billing.spartanhost.net/cart.php?gid=3">Budget Minecraft Plans</a></li>
-							<li><a href="https://billing.spartanhost.net/cart.php?gid=1">Premium Minecraft Plans</a></li>
-							<li><a href="https://billing.spartanhost.net/cart.php?gid=8">Dedicated Server Plans</a></li>
-							<li><a href="https://billing.spartanhost.net/cart.php?gid=7">DDoS Protection Plans</a></li>
-							<li><a href="https://billing.spartanhost.net/cart.php?gid=2">Web Hosting Plans</a></li>
-						</ul>
-					</li>
-					<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Support <b class="caret"></b></a>
-						<ul class="dropdown-menu">
-							<li><a href="http://spartanhost.net/faq">FAQ</a></li>
-							<li><a href="https://billing.spartanhost.net/">Client Area</a></li>
-							<li><a href="https://billing.spartanhost.net/contact.php">Contact Us</a></li>
-							<li><a href="http://spartanhost.net/irc">IRC Chat</a></li>
-						</ul>
-					</li>
-				</ul>
-			</div>
-			<div class="col-md-3">
-				<ul class="nav navbar-nav red bar">
-					<li><a href="http://cp.spartanhost.net/">Multicraft</a></li>
-					<li><a href="https://billing.spartanhost.net/">Client Area</a></li>
-				</ul>
-			</div>
-		</nav>
-		<div class="clearfix"></div>
+	<div class="pagetrimmer">
+		<div class="container">
+			<nav class="main"> 
+				<a class="navbar-brand col-md-2" href="http://spartanhost.net">SpartanHost</a>
+				<div class="col-md-7">	
+					<ul class="nav navbar-nav navbar-right white bar">
+						<li><a href="http://spartanhost.net">Home</a></li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Plans <b class="caret"></b></a>
+							<ul class="dropdown-menu">
+								<li><a href="https://billing.spartanhost.net/cart.php?gid=3">Budget Minecraft Plans</a></li>
+								<li><a href="https://billing.spartanhost.net/cart.php?gid=1">Premium Minecraft Plans</a></li>
+								<li><a href="https://billing.spartanhost.net/cart.php?gid=8">Dedicated Server Plans</a></li>
+								<li><a href="https://billing.spartanhost.net/cart.php?gid=7">DDoS Protection Plans</a></li>
+								<li><a href="https://billing.spartanhost.net/cart.php?gid=2">Web Hosting Plans</a></li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Support <b class="caret"></b></a>
+							<ul class="dropdown-menu">
+								<li><a href="http://spartanhost.net/faq">FAQ</a></li>
+								<li><a href="https://billing.spartanhost.net/">Client Area</a></li>
+								<li><a href="https://billing.spartanhost.net/contact.php">Contact Us</a></li>
+								<li><a href="http://spartanhost.net/irc">IRC Chat</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<div class="col-md-3">
+					<ul class="nav navbar-nav red bar">
+						<li><a href="http://cp.spartanhost.net/">Multicraft</a></li>
+						<li><a href="https://billing.spartanhost.net/">Client Area</a></li>
+					</ul>
+				</div>
+			</nav>
+			<div class="clearfix"></div>
+		</div>
 	</div>
 	<div class="container">
 		<nav class="navbar navbar-sub">
