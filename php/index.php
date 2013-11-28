@@ -2,17 +2,9 @@
 
 // Load up composer autoload, and instantiate the application.
 require 'vendor/autoload.php';
+$config = (require 'config.php');
 
 $app = new \Slim\Slim;
-
-$database = array(
-	'driver'    => 'mysql',
-	'host'      => 'localhost',
-	'username'  => 'root',
-	'password'  => 'your-password',
-);
-
-$baseUrl = 'http://localhost/~connor/131126spartan/app/';
 
 // Regsiter a singleton of the Mustache engine, and tell it to cache
 $app->container->singleton('mustache', function () {
@@ -24,12 +16,12 @@ $app->container->singleton('mustache', function () {
 
 // Helper functiont to render templates
 function renderTemplate($name, $data = array()) {
-	global $app, $baseUrl;
+	global $app, $config;
 
 	$data += array(
 		'currentRoute' => $app->router()->getCurrentRoute(),
-		'baseUrl' => $baseUrl . 'index.php',
-		'baseDir' => $baseUrl,
+		'baseUrl' => $config['baseUrl'] . 'index.php',
+		'baseDir' => $config['baseUrl'],
 	);
 
 	return $app->mustache->loadTemplate($name)->render($data);
@@ -57,9 +49,11 @@ $app->get('/irc', function () {
 
 // AJAX for stats on the homepage
 $app->get('/stats', function ($name) {
-
+	global $config;
 
 	function getStat() {
+		global $config;
+
 		// Load the caching system
 		$cacheDir = 'storage/stats';
 		$adapter = new Desarrolla2\Cache\Adapter\File($cacheDir);
@@ -76,8 +70,8 @@ $app->get('/stats', function ($name) {
 			}
 
 			// Create the database connections
-			$whmcs = makeConnection($database, 'whmcs');
-			$multicraft = makeConnection($database, 'multicraft_daemon');
+			$whmcs = makeConnection($config['database'], 'whmcs');
+			$multicraft = makeConnection($config['database'], 'multicraft_daemon');
 
 			// Get the number of clients...
 			$results = $whmcs->query('SELECT COUNT(*) as  n FROM `tblclients`');
