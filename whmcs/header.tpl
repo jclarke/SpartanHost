@@ -9,7 +9,7 @@
 	{/if}
 	<link href="templates/{$template}/css/whmcs.css" rel="stylesheet">
 	<link href='//fonts.googleapis.com/css?family=Open+Sans:400italic,400,700,300|Oswald:300' rel='stylesheet' type='text/css'>
-	<link href="http://spartanhost.com/css/style.css" rel="stylesheet">
+	<link href="http://spartanhost.net/css/style.css" rel="stylesheet">
 
 	<script src="templates/{$template}/js/whmcs.js"></script>
 
@@ -22,10 +22,10 @@
 {$headeroutput}
 	<div class="container">
 		<nav class="main"> 
-			<a class="navbar-brand col-md-2" href="http://spartanhost.com">SpartanHost</a>
+			<a class="navbar-brand col-md-2" href="http://spartanhost.net">SpartanHost</a>
 			<div class="col-md-7">	
 				<ul class="nav navbar-nav navbar-right white bar">
-					<li><a href="http://spartanhost.com">Home</a></li>
+					<li><a href="http://spartanhost.net">Home</a></li>
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Plans <b class="caret"></b></a>
 						<ul class="dropdown-menu">
@@ -39,10 +39,10 @@
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Support <b class="caret"></b></a>
 						<ul class="dropdown-menu">
-							<li><a href="http://spartanhost.com/faq">FAQ</a></li>
+							<li><a href="http://spartanhost.net/faq">FAQ</a></li>
 							<li><a href="https://billing.spartanhost.net/">Client Area</a></li>
 							<li><a href="https://billing.spartanhost.net/contact.php">Contact Us</a></li>
-							<li><a href="http://spartanhost.com/irc">IRC Chat</a></li>
+							<li><a href="http://spartanhost.net/irc">IRC Chat</a></li>
 						</ul>
 					</li>
 				</ul>

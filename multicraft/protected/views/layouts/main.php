@@ -36,7 +36,7 @@
     <link rel="stylesheet" type="text/css" href="<?php echo Theme::css('main.css') ?>" />
     <link rel="stylesheet" type="text/css" href="<?php echo Theme::css('form.css') ?>" />
     <link href='//fonts.googleapis.com/css?family=Open+Sans:400italic,400,700,300|Oswald:300' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="http://spartanhost.com/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="http://spartanhost.net/css/style.css" />
     <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.min.css" media="all" rel="stylesheet" type="text/css" />
 
 
@@ -47,10 +47,10 @@
 
     <div class="container">
         <nav class="main"> 
-            <a class="navbar-brand col-md-2" href="http://spartanhost.com">SpartanHost</a>
+            <a class="navbar-brand col-md-2" href="http://spartanhost.net">SpartanHost</a>
             <div class="col-md-7">  
                 <ul class="nav navbar-nav navbar-right white bar">
-                    <li><a href="http://spartanhost.com">Home</a></li>
+                    <li><a href="http://spartanhost.net">Home</a></li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Plans <b class="caret"></b></a>
                         <ul class="dropdown-menu">
@@ -64,10 +64,10 @@
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Support <b class="caret"></b></a>
                         <ul class="dropdown-menu">
-                            <li><a href="http://spartanhost.com/faq">FAQ</a></li>
+                            <li><a href="http://spartanhost.net/faq">FAQ</a></li>
                             <li><a href="https://billing.spartanhost.net/">Client Area</a></li>
                             <li><a href="https://billing.spartanhost.net/contact.php">Contact Us</a></li>
-                            <li><a href="http://spartanhost.com/irc">IRC Chat</a></li>
+                            <li><a href="http://spartanhost.net/irc">IRC Chat</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -173,7 +173,7 @@
     </div> 
     <footer class="container">
         <div class="col-md-6">
-            <a href="http://spartanhost.com/terms">Terms of Service</a> | <a href="http://spartanhost.com/careers">Careers</a>
+            <a href="http://spartanhost.net/terms">Terms of Service</a> | <a href="http://spartanhost.net/careers">Careers</a>
         </div>
         <div class="col-md-6 text-right">
             Copyright 2013 SpartanHost. <a href="http://vector-media.net/">Designed</a>. Powered by <a href="http://www.multicraft.org">Multicraft Control Panel</a>
