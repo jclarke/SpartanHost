@@ -35,6 +35,7 @@
 
     <link rel="stylesheet" type="text/css" href="<?php echo Theme::css('main.css') ?>" />
     <link rel="stylesheet" type="text/css" href="<?php echo Theme::css('form.css') ?>" />
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:400italic,400,700,300|Oswald:300' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="http://localhost/~connor/131126spartan/app/css/style.css" />
     <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.min.css" media="all" rel="stylesheet" type="text/css" />
 

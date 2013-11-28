@@ -8,6 +8,7 @@
 	{if $livehelpjs}{$livehelpjs}
 	{/if}
 	<link href="templates/{$template}/css/whmcs.css" rel="stylesheet">
+	<link href='//fonts.googleapis.com/css?family=Open+Sans:400italic,400,700,300|Oswald:300' rel='stylesheet' type='text/css'>
 	<link href="http://localhost/~connor/131126spartan/app/css/style.css" rel="stylesheet">
 
 	<script src="templates/{$template}/js/whmcs.js"></script>
