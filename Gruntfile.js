@@ -61,8 +61,12 @@ module.exports = function(grunt) {
         }]
       },
       post: {
-        src: 'app/css/style.css',
-        dest: 'whmcs/spartan.css'
+        files: [{
+          expand: true,
+          cwd: 'app',
+          src: ['**/*.{css,png,jpg,gif}'],
+          dest: 'whmcs'
+        }]
       },
       packageout: {
         files: [{
