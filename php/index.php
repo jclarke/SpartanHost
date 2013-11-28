@@ -48,7 +48,7 @@ $app->get('/irc', function () {
 });
 
 // AJAX for stats on the homepage
-$app->get('/stats', function ($name) {
+$app->get('/stats', function () {
 	global $config;
 
 	function getStat() {
@@ -66,7 +66,7 @@ $app->get('/stats', function ($name) {
 
 			// Helper function to make a database connection
 			function makeConnection($config, $db) {
-				return new PDO($config['driver'] + ':host=' + $config['host'] + ';dbname=' + $db, $config['username'], $config['password']);
+				return new PDO($config['driver'] . ':host=' . $config['host'] . ';dbname=' . $db, $config['username'], $config['password']);
 			}
 
 			// Create the database connections
@@ -74,17 +74,17 @@ $app->get('/stats', function ($name) {
 			$multicraft = makeConnection($config['database'], 'multicraft_daemon');
 
 			// Get the number of clients...
-			$results = $whmcs->query('SELECT COUNT(*) as  n FROM `tblclients`');
+			$results = $whmcs->query('SELECT COUNT(*) as  n FROM `tblclients`')->fetchAll();
 			$clients = $results[0]['n'];
 
 			
 			// Get the number of players...
-			$results = $multicraft->query('SELECT COUNT(*) as  n FROM `player`');
+			$results = $multicraft->query('SELECT COUNT(*) as  n FROM `player`')->fetchAll();
 			$players = $results[0]['n'];
 			
 			
 			// Get the total RAM
-			$results = $multicraft->query('SELECT SUM(`memory`) as n FROM `server`');
+			$results = $multicraft->query('SELECT SUM(`memory`) as n FROM `server`')->fetchAll();
 			$ram = round($results[0]['n'] / 1024);
 
 			// And le results!
