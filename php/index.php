@@ -70,13 +70,13 @@ $app->get('/stats', function () {
 		} else {
 
 			// Helper function to make a database connection
-			function makeConnection($config, $db) {
-				return new PDO($config['driver'] . ':host=' . $config['host'] . ';dbname=' . $db, $config['username'], $config['password']);
+			function makeConnection($config) {
+				return new PDO($config['driver'] . ':host=' . $config['host'] . ';dbname=' . $config['db'], $config['username'], $config['password']);
 			}
 
 			// Create the database connections
-			$whmcs = makeConnection($config['database'], 'whmcs');
-			$multicraft = makeConnection($config['database'], 'multicraft_daemon');
+			$whmcs = makeConnection($config['database']['whmcs']);
+			$multicraft = makeConnection($config['database']['multicraft']);
 
 			// Get the number of clients...
 			$results = $whmcs->query('SELECT COUNT(*) as  n FROM `tblclients`')->fetchAll();
