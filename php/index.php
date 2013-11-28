@@ -47,6 +47,11 @@ $app->get('/irc', function () {
 	echo renderTemplate('irc');
 });
 
+// IRC chat
+$app->get('/careers', function () {
+	echo renderTemplate('careers');
+});
+
 // AJAX for stats on the homepage
 $app->get('/stats', function () {
 	global $config;
