@@ -60,6 +60,10 @@ module.exports = function(grunt) {
           dest: 'app'
         }]
       },
+      post: {
+        src: 'app/css/style.css',
+        dest: 'whmcs/spartan.css'
+      },
       packageout: {
         files: [{
           expand: true,
@@ -122,7 +126,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-shell');
 
-  grunt.registerTask('default', ['clean:pre', 'concurrent:build', 'concurrent:postbuild', 'clean:post']);
+  grunt.registerTask('default', ['clean:pre', 'concurrent:build', 'concurrent:postbuild', 'copy:post', 'clean:post']);
   grunt.registerTask('package', ['default', 'copy:packageout', 'shell:composer']);
 
 };
