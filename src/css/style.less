@@ -56,7 +56,6 @@
 body {
 	background: url('../img/bg.jpg') center top no-repeat, url('../img/bg.png');
 	overflow-x: hidden;
-	min-width: 995px;
 }
 
 
@@ -89,6 +88,19 @@ nav.main {
 		background: url('../img/logo.png') center center no-repeat;
 		position: relative;
 		top: -7px;
+		min-width:164px;
+	}
+
+	> div::after {
+		content: "\00a0";
+		clear: both;
+		display: block;
+		height: 0;
+	}
+
+	
+	@media (max-width: @screen-sm) {
+		.bar > li { clear:both; }
 	}
 
 	> a, .bar > li > a {
