@@ -51,21 +51,17 @@
 
 <div class="row">
 
+
+<center>
 {if $twitterusername}
 <div class="styled_title">
     <h2>{$LANG.twitterlatesttweets}</h2>
 </div>
-<div id="twitterfeed">
-    <p><img src="images/loading.gif"></p>
-</div>
-{literal}<script language="javascript">
-jQuery(document).ready(function(){
-  jQuery.post("announcements.php", { action: "twitterfeed", numtweets: 3 },
-    function(data){
-      jQuery("#twitterfeed").html(data);
-    });
-});
-</script>{/literal}
+{literal}
+
+<a class="twitter-timeline" href="https://twitter.com/SpartanHost" data-widget-id="372779693641986049"></a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>{/literal}
+</center>
 {elseif $announcements}
 <div class="styled_title">
     <h2>{$LANG.latestannouncements}</h2>
