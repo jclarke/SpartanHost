@@ -59,6 +59,35 @@ module.exports = function(grunt) {
           src: ['**'],
           dest: 'app'
         }]
+      },
+      packageout: {
+        files: [{
+          expand: true,
+          cwd: 'app',
+          src: ['**'],
+          dest: 'package/main'
+        }, {
+          expand: true,
+          cwd: 'whmcs',
+          src: ['**'],
+          dest: 'package/whmcs/templates/spartan'
+        }, {
+          expand: true,
+          cwd: 'multicraft',
+          src: ['**'],
+          dest: 'package/multicraft'
+        }]
+      }
+    },
+    shell: {
+      composer: {
+        command: 'composer update',
+        options: {
+          stdout: true,
+          execOptions: {
+            cwd: 'package/main'
+          }
+        }
       }
     },
     imagemin: {
@@ -91,7 +120,9 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
+  grunt.loadNpmTasks('grunt-shell');
 
   grunt.registerTask('default', ['clean:pre', 'concurrent:build', 'concurrent:postbuild', 'clean:post']);
+  grunt.registerTask('package', ['default', 'copy:packageout', 'shell:composer']);
 
 };
