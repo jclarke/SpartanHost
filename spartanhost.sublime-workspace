@@ -1,0 +1,825 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"bas",
+				"baseUrl"
+			],
+			[
+				"data",
+				"database"
+			],
+			[
+				"make",
+				"makeConnection"
+			],
+			[
+				"json",
+				"json_encode"
+			],
+			[
+				"JSON",
+				"json_encode"
+			],
+			[
+				"over",
+				"overflow-x"
+			],
+			[
+				"intr",
+				"introDesign"
+			],
+			[
+				"win",
+				"windowHeight"
+			],
+			[
+				"filter",
+				"filterMethodName"
+			],
+			[
+				"call_us",
+				"call_user_func_array"
+			],
+			[
+				"para",
+				"params"
+			],
+			[
+				"fil",
+				"filterMethodName"
+			],
+			[
+				"array_me",
+				"array_merge_recursive"
+			],
+			[
+				"perm",
+				"permissions"
+			],
+			[
+				"ar",
+				"arguments"
+			],
+			[
+				"process",
+				"processStringRule"
+			],
+			[
+				"fun",
+				"fun	function …"
+			],
+			[
+				"strto",
+				"strtolower"
+			],
+			[
+				"call_use",
+				"call_user_method_array"
+			],
+			[
+				"current",
+				"currently"
+			],
+			[
+				"call_",
+				"call_user_method_array"
+			],
+			[
+				"str_re",
+				"str_replace"
+			],
+			[
+				"sub",
+				"submitForm"
+			],
+			[
+				"nest",
+				"nestedViews"
+			],
+			[
+				"cla",
+				"class"
+			],
+			[
+				"handle",
+				"handleResponse"
+			],
+			[
+				"sor",
+				"sortBySubvalue"
+			],
+			[
+				"array_k",
+				"array_key_exists"
+			],
+			[
+				"is_a",
+				"is_array"
+			],
+			[
+				"va",
+				"validator"
+			],
+			[
+				"vali",
+				"validator"
+			],
+			[
+				"val",
+				"validation"
+			],
+			[
+				"updat",
+				"updateFunc"
+			],
+			[
+				"obj",
+				"objectImage"
+			],
+			[
+				"ge",
+				"genericObject"
+			],
+			[
+				"id",
+				"board_id"
+			],
+			[
+				"resour",
+				"resources"
+			],
+			[
+				"charge",
+				"chargeService"
+			],
+			[
+				"Cred",
+				"CreditUpdateException"
+			],
+			[
+				"doUpd",
+				"doUpdateServices"
+			],
+			[
+				"cance",
+				"cancelServices"
+			],
+			[
+				"upda",
+				"updateServices"
+			],
+			[
+				"preg_a",
+				"preg_match"
+			],
+			[
+				"func_get",
+				"func_get_args"
+			],
+			[
+				"is_in",
+				"is_int"
+			],
+			[
+				"getBac",
+				"getBackupOverage"
+			],
+			[
+				"snap",
+				"snapshots"
+			],
+			[
+				"alr",
+				"alreadyHas"
+			],
+			[
+				"getAd",
+				"getAddonListing"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 267.0,
+		"selected_items":
+		[
+			[
+				"html",
+				"Tidy HTML"
+			],
+			[
+				"tab",
+				"Indentation: Convert to Tabs"
+			],
+			[
+				"php",
+				"Set Syntax: PHP"
+			],
+			[
+				"tabs",
+				"Indentation: Convert to Tabs"
+			],
+			[
+				"java",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"ta",
+				"Indentation: Convert to Tabs"
+			],
+			[
+				"hand",
+				"Set Syntax: Handlebars"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"coffee",
+				"Set Syntax: CoffeeScript"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"ejs",
+				"Set Syntax: EJS (<% and %>)"
+			],
+			[
+				"tid",
+				"Tidy HTML"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"package",
+				"Package Control: Remove Package"
+			],
+			[
+				"lara",
+				"Set Syntax: PHP - Laravel Blade"
+			],
+			[
+				"mark",
+				"Set Syntax: Markdown"
+			],
+			[
+				"json",
+				"Set Syntax: JSON"
+			],
+			[
+				"lint",
+				"Preferences: SublimeLinter Settings – Default"
+			],
+			[
+				"remov",
+				"Package Control: Remove Package"
+			],
+			[
+				"lin",
+				"SublimeLinter: Show Error List"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"book",
+				"Bookmarks: Toggle"
+			],
+			[
+				"bookma",
+				"Bookmarks: Toggle"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 575.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/connor/Documents/Github/SpartanHost/package.json",
+		"/Users/connor/Documents/Github/SpartanHost/.gitignore",
+		"/Users/connor/Documents/Github/SpartanHost/Gruntfile.js",
+		"/Users/connor/Documents/Github/SpartanHost/src/resources.mustache",
+		"/Users/connor/Documents/Github/SpartanHost/multicraft/protected/views/layouts/main.php",
+		"/Users/connor/Documents/Github/SpartanHost/package/multicraft/protected/views/layouts/main.php",
+		"/Users/connor/Documents/Github/SpartanHost/package/whmcs/templates/spartan/footer.tpl",
+		"/Users/connor/Documents/Github/SpartanHost/package/whmcs/templates/spartan/header.tpl",
+		"/Users/connor/Documents/Github/SpartanHost/whmcs/footer.tpl",
+		"/Users/connor/Documents/Github/SpartanHost/whmcs/header.tpl",
+		"/Users/connor/Documents/Github/SpartanHost/multicraft/protected/views/server/view.php",
+		"/Users/connor/Documents/Github/SpartanHost/src/irc.mustache",
+		"/Users/connor/Documents/Github/SpartanHost/src/careers.mustache",
+		"/Users/connor/Documents/Github/SpartanHost/src/footer.mustache",
+		"/Users/connor/Documents/Github/SpartanHost/src/header.mustache",
+		"/Users/connor/Documents/Github/SpartanHost/php/index.php",
+		"/Users/connor/Documents/Github/SpartanHost/php/config.php",
+		"/Users/connor/Documents/Github/SpartanHost/src/css/style.less",
+		"/Users/connor/Documents/Github/SpartanHost/src/js/app.coffee",
+		"/Users/connor/Documents/Github/SpartanHost/src/index.mustache",
+		"/Users/connor/Documents/Github/SpartanHost/src/faq.mustache",
+		"/Users/connor/Documents/Github/SpartanHost/app/index.php",
+		"/Users/connor/Documents/Github/SpartanHost/php/storage/.htaccess",
+		"/Users/connor/Documents/Github/SpartanHost/php/vendor/.htaccess",
+		"/Users/connor/Documents/Github/SpartanHost/php/.htaccess",
+		"/Users/connor/Documents/Github/SpartanHost/src/terms.mustache",
+		"/Users/connor/Documents/Github/SpartanHost/php/composer.json",
+		"/Users/connor/Documents/Github/SpartanHost/src/css/util/variables.less",
+		"/Users/connor/Documents/Github/SpartanHost/bower_components/bootstrap/less/mixins.less",
+		"/Users/connor/Documents/Github/SpartanHost/src/css/util/toolbox.less",
+		"/Users/connor/Documents/Github/SpartanHost/php/storage/stats/.gitignore",
+		"/Users/connor/Documents/Github/SpartanHost/php/app/support/Router.php",
+		"/Users/connor/Documents/Github/SpartanHost/php/storage/mustache/.gitignore",
+		"/Users/connor/Documents/Github/SpartanHost/php/.gitignore",
+		"/Users/connor/Documents/Github/SpartanHost/src/js/gateway.coffee",
+		"/Users/connor/Documents/Github/SpartanHost/src/index.html",
+		"/Users/connor/Documents/Github/SpartanHost/src/css/bs/variables.less",
+		"/Users/connor/Documents/Github/SpartanHost/src/js/build.coffee",
+		"/Users/connor/Documents/Github/SpartanHost/src/js/start.coffee",
+		"/Users/connor/Documents/Github/SpartanHost/src/css/bs/core.less",
+		"/Users/connor/Documents/Github/SpartanHost/app/index.html",
+		"/Users/connor/Documents/Github/SpartanHost/bower.json",
+		"/Users/connor/Documents/Github/SpartanHost/app/.gitignore",
+		"/Users/connor/Documents/Github/SpartanHost/readme.md",
+		"/Users/connor/Documents/Github/gruntbase/Gruntfile.js",
+		"/Users/connor/Documents/Github/connorpeet.com/src/css/style.less",
+		"/Users/connor/Documents/Github/connorpeet.com/package.json",
+		"/Users/connor/Documents/Github/connorpeet.com/public/index.html",
+		"/Users/connor/Documents/Github/connorpeet.com/src/js/connor.coffee",
+		"/Users/connor/Documents/Github/connorpeet.com/.gitignore",
+		"/Users/connor/Documents/Github/chunklet-php/app/modules/MysqlService/views/index.blade.php",
+		"/Users/connor/Documents/Github/protobill/app/repositories/PermissionsLayer.php",
+		"/Users/connor/Documents/Github/protobill/app/tests/repositories/PermissionsLayerTest.php",
+		"/Users/connor/Documents/Github/protobill/.gitignore",
+		"/Users/connor/Documents/Github/protobill/public/css/.gitignore",
+		"/Users/connor/Documents/Github/protobill/public/js/.gitignore",
+		"/Users/connor/Documents/Github/protobill/public/lib/.gitignore",
+		"/Users/connor/Documents/Github/protobill/public/fonts/.gitignore",
+		"/Users/connor/Documents/Github/protobill/app/tests/repositories/PermissionsLayerTestcase.php",
+		"/Users/connor/Documents/Github/protobill/app/repositories/AuthenticationRepositoryInterface.php",
+		"/Users/connor/Documents/Github/protobill/app/repositories/AuthAuthenticationRepository.php",
+		"/Users/connor/Documents/Github/protobill/app/repositories/EloquentUserRepository.php",
+		"/Users/connor/Documents/Github/protobill/app/routes.php",
+		"/Users/connor/Documents/Github/protobill/app/controllers/UsersController.php",
+		"/Users/connor/Documents/Github/protobill/app/controllers/AuthenticationController.php",
+		"/Users/connor/Documents/Github/protobill/app/start/global.php",
+		"/Users/connor/Documents/Github/protobill/app/repositories/EloquentPermissionsLayer.php",
+		"/Users/connor/Documents/Github/protobill/package.json",
+		"/Users/connor/Documents/Github/protobill/Gruntfile.js",
+		"/Users/connor/Documents/test.html",
+		"/Users/connor/Documents/Github/ferrous-websites/v3/js/pagemaster.js",
+		"/Users/connor/Documents/Github/ferrous-websites/.gitignore",
+		"/Users/connor/Documents/Github/ferrous-websites/v3/Gruntfile.js",
+		"/Users/connor/Documents/Github/ferrous-websites/v3/package.json",
+		"/Users/connor/Documents/Github/ferrous-websites/v3/templates/plans.hbs",
+		"/Users/connor/Documents/Github/ferrous-websites/v3/public/pages.js",
+		"/Users/connor/Documents/Github/iodefend-web/Gruntfile.js",
+		"/Users/connor/Documents/Github/iodefend-web/app/views/hello.blade.php",
+		"/Users/connor/Documents/Github/iodefend-web/src/js/app/router.coffee",
+		"/Users/connor/Documents/Github/iodefend-web/src/appjs/router.coffee",
+		"/Users/connor/Documents/Github/iodefend-web/src/appjs/router.js",
+		"/Users/connor/Documents/Github/iodefend-web/app/views/hello.php",
+		"/Users/connor/Documents/Github/mooody/assets/linker/tpl/index.html",
+		"/Users/connor/Documents/Github/mooody/assets/linker/tpl/error.html",
+		"/Users/connor/Documents/Github/mooody/assets/linker/tpl/register.html",
+		"/Users/connor/Documents/Github/mooody/assets/linker/tpl/login.html",
+		"/Users/connor/Documents/Github/mooody/package.json",
+		"/Users/connor/Documents/Github/mooody/Gruntfile.js",
+		"/Users/connor/Documents/Github/mooody/views/layout.ejs",
+		"/Users/connor/Documents/Github/mooody/assets/linker/js/routes.coffee",
+		"/Users/connor/Documents/Github/mooody/assets/linker/js/canvas.js",
+		"/Users/connor/Documents/Github/mooody/.tmp/public/linker/js/routes.js",
+		"/Users/connor/Library/Application Support/Sublime Text 2/Packages/CoffeeCompile/Keymaps/Default (OSX).sublime-keymap",
+		"/Users/connor/Documents/Github/startup-weekend/app/controllers/ImageController.php",
+		"/Users/connor/Documents/Github/mooody/assets/linker/js/backbone/errormessage.js",
+		"/Users/connor/Documents/Github/mooody/assets/linker/styles/styles.less",
+		"/Users/connor/Documents/Github/mooody/assets/tpl/login.html",
+		"/Users/connor/Documents/Github/mooody/api/controllers/AuthController.js",
+		"/Users/connor/Documents/Github/mooody/config/routes.js",
+		"/Users/connor/Documents/Github/mooody/assets/js/app/v/Login.js",
+		"/Users/connor/Documents/Github/mooody/assets/js/routes.js",
+		"/Users/connor/Documents/Github/mooody/api/models/Elements.js",
+		"/Users/connor/Documents/Github/mooody/api/models/Users.js",
+		"/Users/connor/Documents/Github/mooody/config/views.js",
+		"/Users/connor/Documents/Github/mooody/assets/js/app/c/Auth.js",
+		"/Users/connor/Documents/Github/mooody/assets/js/app.js",
+		"/Users/connor/Documents/Github/mooody/assets/js/gateway.js",
+		"/Users/connor/Documents/Github/mooody/views/home/login.ejs",
+		"/Users/connor/Documents/Github/mooody/views/home/signup.html",
+		"/Users/connor/Documents/Github/mooody/views/site/partials/header.ejs",
+		"/Users/connor/Documents/Github/mooody/views/site/partials/navigation.ejs",
+		"/Users/connor/Documents/Github/mooody/views/home/index.ejs",
+		"/Users/connor/Documents/Github/startup-weekend/app/views/layout/foot.blade.php",
+		"/Users/connor/Documents/Github/mooody/views/site/partials/footer.ejs",
+		"/Users/connor/Documents/Github/mooody/assets/linker/styles/buildr.less",
+		"/Users/connor/Documents/Github/startup-weekend/src/js/canvas.js",
+		"/Users/connor/Documents/Github/startup-weekend/app/views/layout/nav.blade.php",
+		"/Users/connor/Documents/Github/startup-weekend/app/controllers/BaseController.php",
+		"/Users/connor/Documents/Github/startup-weekend/app/views/pages/index.blade.php",
+		"/Users/connor/Documents/Github/startup-weekend/app/routes.php",
+		"/Users/connor/Documents/Github/startup-weekend/app/controllers/BoardController.php",
+		"/Users/connor/Documents/Github/startup-weekend/app/views/pages/allboards.blade.php",
+		"/Users/connor/Documents/Github/startup-weekend/src/css/styles.less",
+		"/Users/connor/Documents/Github/startup-weekend/app/views/pages/board.blade.php",
+		"/Users/connor/Documents/Github/startup-weekend/app/repos/ImgUpload.php",
+		"/Users/connor/Documents/Github/startup-weekend/app/repos/ImgRemote.php",
+		"/Users/connor/Documents/Github/startup-weekend/app/controllers/ResourceController.php",
+		"/Users/connor/Documents/Github/startup-weekend/node_modules/twitter-bootstrap-3.0.0/_includes/footer.html"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"superuser",
+			"spartanhost.com",
+			"{{ baseDir }}",
+			"irc",
+			"$database",
+			"$baseUrl",
+			"input-group",
+			"@import \"",
+			".tran",
+			"our bu",
+			"<div class=\"head\">",
+			"terms",
+			"[0-9]+\\.",
+			"<div>",
+			"div",
+			"<br />",
+			"\n	</div>\n	<p></p>",
+			"</b></div>",
+			"style=\"cursor:hand; cursor:pointer\">",
+			" rel=\"stylesheet\" type=\"text/css\" />",
+			"<link href=",
+			"'",
+			"$index",
+			"index",
+			"router",
+			"Sellers Crisp",
+			"			* ",
+			"div",
+			"'Oswald'",
+			"<div class=\"col-md-4\">",
+			"left",
+			"center",
+			"25",
+			"1",
+			"large",
+			"1",
+			"grid",
+			"i",
+			"css",
+			"['//",
+			"'//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min', ",
+			"div",
+			"js",
+			"../../../",
+			"@import \"",
+			"spacecubehosting",
+			"require",
+			"test",
+			"liverel",
+			"compass",
+			"test",
+			"less",
+			"cssmin",
+			"autoprefixer",
+			"connect",
+			"$(window).height()",
+			"  ",
+			"origin",
+			"lib",
+			"$users",
+			"user",
+			"error",
+			"public",
+			"0",
+			"5",
+			"50",
+			"grabPage",
+			"col-md-4",
+			"},\n",
+			"583",
+			"735",
+			"message ",
+			"jsFilesToInject",
+			".js",
+			".tmp/public/",
+			"jsFilesToInject",
+			"../../",
+			"node_m",
+			"ErrorMessage",
+			" View",
+			"Views",
+			"view",
+			"setView",
+			"roler",
+			"\n    router.on 'route:login', ->\n        @setView new LoginView()",
+			"MagicView",
+			"@template",
+			"extends MagicView",
+			"Backbone.MagicView",
+			"function() {",
+			"MagicVie",
+			"this.",
+			"Backbone.MagicView",
+			"Backbone.View",
+			"Search",
+			"this.",
+			"<%=",
+			"{\n",
+			"caller",
+			"() ",
+			"login",
+			"date",
+			"modal",
+			"') }}",
+			"{ HTML::link(",
+			"../../",
+			"jst",
+			"board",
+			"3",
+			"3 ",
+			"3",
+			"upload",
+			"class=\"btn btn-default btn-add\"><i class=\"icon",
+			"<i class=",
+			"pintrest",
+			"download",
+			"grabfile",
+			"not a valid",
+			"success",
+			"btn-primary",
+			"hset",
+			"{\n",
+			"getData",
+			"getData$",
+			"redis",
+			"->all",
+			"\n",
+			"share"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"spartanhost.net",
+			" ",
+			"\\t",
+			"Redirect::to($this->url('view'))->withErrors("
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.coffeecompile_output":
+	{
+		"height": 112.0
+	},
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"main.php",
+				"SpartanHost/multicraft/protected/views/layouts/main.php"
+			],
+			[
+				"header.tp",
+				"SpartanHost/whmcs/header.tpl"
+			],
+			[
+				"grun",
+				"mooody/Gruntfile.js"
+			],
+			[
+				"gruntfi",
+				"mooody/Gruntfile.js"
+			],
+			[
+				"routes",
+				"mooody/config/routes.js"
+			],
+			[
+				"styl",
+				"src/css/styles.less"
+			],
+			[
+				"allboa",
+				"app/views/pages/allboards.blade.php"
+			],
+			[
+				"foo",
+				"app/views/layout/foot.blade.php"
+			],
+			[
+				"footer",
+				"node_modules/twitter-bootstrap-3.0.0/_includes/footer.html"
+			],
+			[
+				"style",
+				"src/css/styles.less"
+			],
+			[
+				"nav",
+				"app/views/layout/nav.blade.php"
+			],
+			[
+				"imgr",
+				"app/repos/ImgRemote.php"
+			],
+			[
+				"board.b",
+				"app/views/pages/board.blade.php"
+			],
+			[
+				"imagecont",
+				"app/controllers/ImageController.php"
+			],
+			[
+				"imgre",
+				"app/repos/ImgRemote.php"
+			],
+			[
+				"imagecon",
+				"app/controllers/ImageController.php"
+			],
+			[
+				"canvas",
+				"src/js/canvas.js"
+			],
+			[
+				"canva",
+				"src/js/canvas.js"
+			],
+			[
+				"appde",
+				"appdev.html"
+			],
+			[
+				"resour",
+				"app/controllers/ResourceController.php"
+			],
+			[
+				"boardc",
+				"app/controllers/BoardController.php"
+			],
+			[
+				"colorp",
+				"src/js/colorPicker.js"
+			],
+			[
+				"route",
+				"app/routes.php"
+			],
+			[
+				"login",
+				"app/controllers/LoginController.php"
+			],
+			[
+				"style.e",
+				"node_modules/grunt-contrib-less/test/fixtures/style.less"
+			],
+			[
+				"board",
+				"app/views/pages/board.blade.php"
+			],
+			[
+				"image",
+				"app/elements/Image.php"
+			],
+			[
+				"error",
+				"app/views/layout/error.blade.php"
+			],
+			[
+				"credit",
+				"app/views/pages/credits.blade.php"
+			],
+			[
+				"chunkbr",
+				"app/modules/ChunkBridge.php"
+			],
+			[
+				"pack",
+				"public/adm/package.json"
+			],
+			[
+				"app.ph",
+				"app/config/app.php"
+			],
+			[
+				"com",
+				"composer.json"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 246.0,
+	"status_bar_visible": true
+}

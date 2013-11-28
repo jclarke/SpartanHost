@@ -7,5 +7,5 @@ return array(
 		'username'  => 'root',
 		'password'  => '',
 	),
-	'baseURL' => 'http://localhost/~connor/131126spartan/app/'
+	'baseUrl' => 'http://spartanhost.net'
 );
