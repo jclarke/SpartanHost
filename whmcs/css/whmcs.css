@@ -646,6 +646,12 @@ div.twofabackupcode p {
   display: list-item;
 }
 
+.clientheader, .adminheader {
+font-weight: bold;
+margin: 30px 0 5px;
+border-bottom: 1px solid #eee;
+}
+
 /* leafs */
 
 #whmcsorderfrm hr {

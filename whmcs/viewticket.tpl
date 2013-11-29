@@ -17,26 +17,26 @@
 
 <h2>{$subject}</h2>
 
-<div class="ticketdetailscontainer">
-    <div class="col4">
+<div class="ticketdetailscontainer row">
+    <div class="col-md-3">
         <div class="internalpadding">
             {$LANG.supportticketsubmitted}
             <div class="detail">{$date}</div>
         </div>
     </div>
-    <div class="col4">
+    <div class="col-md-3">
         <div class="internalpadding">
             {$LANG.supportticketsdepartment}
             <div class="detail">{$department}</div>
         </div>
     </div>
-    <div class="col4">
+    <div class="col-md-3">
         <div class="internalpadding">
             {$LANG.supportticketspriority}
             <div class="detail">{$urgency}</div>
         </div>
     </div>
-    <div class="col4">
+    <div class="col-md-3">
         <div class="internalpadding">
             {$LANG.supportticketsstatus}
             <div class="detail">{$status}</div>
@@ -61,19 +61,19 @@
     <fieldset class="form-group">
 
 	    <div class="row">
-            <div class="multicol">
+            <div class="col-md-6">
                 <div class="form-group">
         		    <label class="control-label bold" for="name">{$LANG.supportticketsclientname}</label>
         			<div class="controls">
-        			    {if $loggedin}<input class="input-xlarge disabled" type="text" id="name" value="{$clientname}" disabled="disabled" />{else}<input class="input-xlarge" type="text" name="replyname" id="name" value="{$replyname}" />{/if}
+        			    {if $loggedin}<input class="form-control disabled" type="text" id="name" value="{$clientname}" disabled="disabled" />{else}<input class="form-control" type="text" name="replyname" id="name" value="{$replyname}" />{/if}
         			</div>
         		</div>
         	</div>
-            <div class="multicol">
+            <div class="col-md-6">
                 <div class="form-group">
         		    <label class="control-label bold" for="email">{$LANG.supportticketsclientemail}</label>
         			<div class="controls">
-        			    {if $loggedin}<input class="input-xlarge disabled" type="text" id="email" value="{$email}" disabled="disabled" />{else}<input class="input-xlarge" type="text" name="replyemail" id="email" value="{$replyemail}" />{/if}
+        			    {if $loggedin}<input class="form-control disabled" type="text" id="email" value="{$email}" disabled="disabled" />{else}<input class="form-control" type="text" name="replyemail" id="email" value="{$replyemail}" />{/if}
         			</div>
         		</div>
         	</div>
@@ -161,25 +161,23 @@
 
 <p><input type="button" value="{$LANG.clientareabacklink}" class="btn" onclick="window.location='supporttickets.php'" /> <input type="button" value="{$LANG.supportticketsreply}" class="btn btn-primary" onclick="jQuery('#replycont2').slideToggle()" />{if $showclosebutton} <input type="button" value="{$LANG.supportticketsclose}" class="btn btn-danger" onclick="window.location='{$smarty.server.PHP_SELF}?tid={$tid}&amp;c={$c}&amp;closeticket=true'" />{/if}</p>
 
-<div id="replycont2" class="ticketreplybox hide">
+<div id="replycont2" class="ticketreplybox">
 <form method="post" action="{$smarty.server.PHP_SELF}?tid={$tid}&amp;c={$c}&amp;postreply=true" enctype="multipart/form-data" class="form-stacked">
 
-    <fieldset class="form-group">
-
 	    <div class="row">
-            <div class="multicol">
+            <div class="col-md-6">
                 <div class="form-group">
         		    <label class="control-label bold" for="name">{$LANG.supportticketsclientname}</label>
         			<div class="controls">
-        			    {if $loggedin}<input class="input-xlarge disabled" type="text" id="name" value="{$clientname}" disabled="disabled" />{else}<input class="input-xlarge" type="text" name="replyname" id="name" value="{$replyname}" />{/if}
+        			    {if $loggedin}<input class="form-control disabled" type="text" id="name" value="{$clientname}" disabled="disabled" />{else}<input class="form-control" type="text" name="replyname" id="name" value="{$replyname}" />{/if}
         			</div>
         		</div>
         	</div>
-            <div class="multicol">
+            <div class="col-md-6">
                 <div class="form-group">
         		    <label class="control-label bold" for="email">{$LANG.supportticketsclientemail}</label>
         			<div class="controls">
-        			    {if $loggedin}<input class="input-xlarge disabled" type="text" id="email" value="{$email}" disabled="disabled" />{else}<input class="input-xlarge" type="text" name="replyemail" id="email" value="{$replyemail}" />{/if}
+        			    {if $loggedin}<input class="form-control disabled" type="text" id="email" value="{$email}" disabled="disabled" />{else}<input class="form-control" type="text" name="replyemail" id="email" value="{$replyemail}" />{/if}
         			</div>
         		</div>
         	</div>
@@ -201,8 +199,6 @@
                 ({$LANG.supportticketsallowedextensions}: {$allowedfiletypes})
 			</div>
 		</div>
-
-    </fieldset>
 
     <p align="center"><input type="submit" value="{$LANG.supportticketsticketsubmit}" class="btn btn-primary" /></p>
 
