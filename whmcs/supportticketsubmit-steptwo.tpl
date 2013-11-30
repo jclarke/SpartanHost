@@ -33,7 +33,7 @@ getticketsuggestions();
 {/if}
 
 <br />
-<div class="alert alert-info"><b>Did you know</b> you can also call! UK number: <b>02895 813535</b>. UUS Number (Phoenix): <b>(602) 910-5858</b>.</div>
+<div class="alert alert-info"><b>Did you know</b> you can also call! UK number: <b>02895 813535</b>. US Number (Phoenix): <b>(602) 910-5858</b>.</div>
 <form name="submitticket" method="post" action="{$smarty.server.PHP_SELF}?step=3" enctype="multipart/form-data" class="center95 form-stacked">
 	    <div class="row">
             <div class="col-md-6">
