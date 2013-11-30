@@ -169,6 +169,7 @@
             ?>
 
             <?php echo $content; ?>
+            <div class="clearfix"></div>
         </div>
     </div> 
     <footer class="container">
