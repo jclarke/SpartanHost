@@ -25,6 +25,7 @@
 </div>
 <div class="col-md-9">
     <?php echo $content; ?>
+    <div class="clearfix"></div>
 </div>
 <div class="clearfix"></div>
 <?php $this->endContent(); ?>
