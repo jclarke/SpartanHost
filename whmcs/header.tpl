@@ -3,14 +3,14 @@
 	<head>
 	<meta http-equiv="content-type" content="text/html; charset={$charset}" />
 	<title>{if $kbarticle.title}{$kbarticle.title} - {/if}{$pagetitle} - {$companyname}</title>
-
-	<script type="text/javascript" src="includes/jscript/jquery.js"></script>
 	{if $livehelpjs}{$livehelpjs}
 	{/if}
 	<link href="templates/{$template}/css/whmcs.css" rel="stylesheet">
 	<link href='//fonts.googleapis.com/css?family=Open+Sans:400italic,400,700,300|Oswald:300' rel='stylesheet' type='text/css'>
 	<link href="templates/{$template}/css/style.css" rel="stylesheet">
-
+	
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
 	<script src="templates/{$template}/js/whmcs.js"></script>
 
 	{$headoutput}

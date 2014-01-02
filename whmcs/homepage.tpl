@@ -55,21 +55,12 @@
 	</div>
 </div>
 
-{if $twitterusername}
 <div class="page-header">
 	<h2>{$LANG.twitterlatesttweets}</h2>
 </div>
-<div id="twitterfeed">
-	<p><img src="images/loading.gif" alt="loading..."></p>
-</div>
 {literal}
-<script type="text/javascript">
-	jQuery(document).ready(function(){jQuery.post("announcements.php",{action:"twitterfeed",numtweets:3},function(data){jQuery("#twitterfeed").html(data);});});
-</script>
+<center>
+<a class="twitter-timeline" href="https://twitter.com/SpartanHost" data-widget-id="372779693641986049"></a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+</center>
 {/literal}
-{elseif $announcements}
-<h2>{$LANG.latestannouncements}</h2>
-	{foreach from=$announcements item=announcement}
-<p>{$announcement.date} - <a href="{if $seofriendlyurls}announcements/{$announcement.id}/{$announcement.urlfriendlytitle}.html{else}announcements.php?id={$announcement.id}{/if}"><b>{$announcement.title}</b></a><br>{$announcement.text|strip_tags|truncate:100:"..."}</p>
-	{/foreach}
-{/if}
