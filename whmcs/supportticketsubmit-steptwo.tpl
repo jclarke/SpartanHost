@@ -11,7 +11,7 @@
 	</ul>
 </div>
 {/if}
-
+<div class="alert alert-info"><b>Did you know</b> you can also call! UK number: <b>02895 813535</b>. US Number (Phoenix): <b>(602) 910-5858</b>.</div>
 <form name="submitticket" method="post" action="{$smarty.server.PHP_SELF}" enctype="multipart/form-data">
 	<input type="hidden" name="step" value="3">
 	<div class="row form-group">
