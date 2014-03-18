@@ -1,183 +1,257 @@
 <div class="page-header">
-	<h1>{$LANG.clientareanavdetails}</h1>
+	<h1>{$product}</h1>
 </div>
 
-<ul class="nav nav-tabs" style="margin-bottom: 30px;">
-	<li class="active"><a href="clientarea.php?action=details">{$LANG.clientareanavdetails}</a></li>
-	{if $condlinks.updatecc}<li><a href="clientarea.php?action=creditcard">{$LANG.clientareanavccdetails}</a></li>{/if}
-	<li><a href="clientarea.php?action=contacts">{$LANG.clientareanavcontacts}</a></li>
-	<li><a href="clientarea.php?action=changepw">{$LANG.clientareanavchangepw}</a></li>
-	{if $condlinks.security}<li><a href="clientarea.php?action=security">{$LANG.clientareanavsecurity}</a></li>{/if}
-</ul>
-
-{if $successful}
+{if $modulechangepwresult eq "success"}
 <div class="alert alert-success alert-dismissable">
 	<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-	{$LANG.changessavedsuccessfully}
+	{$LANG.serverchangepasswordsuccessful}
 </div>
-{/if}
-
-{if $errormessage}
+{elseif $modulechangepwresult eq "error"}
 <div class="alert alert-danger alert-dismissable">
 	<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-	<h4 class="alert-heading">{$LANG.clientareaerrors}</h4>
-	<ul>
-		{$errormessage}
-	</ul>
+	{$modulechangepasswordmessage}
+</div>
+{elseif $modulecustombuttonresult=="success"}
+<div class="alert alert-success alert-dismissable">
+	<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+	{$LANG.moduleactionsuccess}
+</div>
+{elseif $modulecustombuttonresult}
+<div class="alert alert-danger alert-dismissable">
+	<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+	<strong>{$LANG.moduleactionfailed}:</strong> {$modulecustombuttonresult}
 </div>
 {/if}
 
-<form class="form-horizontal" method="post" action="clientarea.php">
-	<input type="hidden" name="action" value="details">
-	<div class="row">
-		<div class="col-md-6">
-			 <div class="form-group">
-				 <label class="col-md-4 control-label" for="firstname">{$LANG.clientareafirstname}</label>
-				<div class="col-md-8">
-					 <input type="text" name="firstname" id="firstname" class="form-control" value="{$clientfirstname}"{if in_array('firstname',$uneditablefields)} disabled="disabled" class="disabled"{/if} >
-				</div>
+<ul class="nav nav-tabs">
+	<li class="active"><a href="#tab-information" data-toggle="tab" title="{$LANG.information}">{$LANG.information}</a></li>
+	{if $modulechangepassword}<li><a href="#tab-changepw" data-toggle="tab" title="{$LANG.serverchangepassword}">{$LANG.serverchangepassword}</a></li>{/if}
+	{if $downloads}<li><a href="#tab-downloads" data-toggle="tab" title="{$LANG.downloadstitle}">{$LANG.downloadstitle}</a></li>{/if}
+	{if $addons || $addonsavailable}<li><a href="#tab-addons" data-toggle="tab" title="{$LANG.clientareahostingaddons}">{$LANG.clientareahostingaddons}</a></li>{/if}
+	{if $packagesupgrade || $configoptionsupgrade || $showcancelbutton || $modulecustombuttons}
+	<li class="dropdown">
+		<a href="#" class="dropdown-toggle" data-toggle="dropdown" title="{$LANG.productmanagementactions}">{$LANG.productmanagementactions}<b class="caret"></b></a>
+		<ul class="dropdown-menu">
+			{foreach from=$modulecustombuttons key=label item=command}
+			<li><a href="clientarea.php?action=productdetails&amp;id={$id}&amp;modop=custom&amp;a={$command}" title="{$label}">{$label}</a></li>
+			{/foreach}
+			{if $packagesupgrade}<li><a href="upgrade.php?type=package&amp;id={$id}">{$LANG.upgradedowngradepackage}</a></li>{/if}
+			{if $configoptionsupgrade}<li><a href="upgrade.php?type=configoptions&amp;id={$id}">{$LANG.upgradedowngradeconfigoptions}</a></li>{/if}
+			{if $showcancelbutton}<li><a href="clientarea.php?action=cancel&amp;id={$id}">{$LANG.clientareacancelrequestbutton}</a></li>{/if}
+		</ul>
+	</li>
+	{/if}
+</ul>
+
+<div class="tab-content">
+	<div class="tab-pane active" id="tab-information">
+		<div class="row">
+			<div class="col-md-4">
+				<h2>{$LANG.information}</h2>
+				<p>{$LANG.clientareaproductdetailsintro}</p>
+				<a href="clientarea.php?action=products" title="{$LANG.backtoserviceslist}" class="btn btn-default">{$LANG.backtoserviceslist}</a>
 			</div>
-			<div class="form-group">
-				<label class="col-md-4 control-label" for="lastname">{$LANG.clientarealastname}</label>
-				<div class="col-md-8">
-					<input type="text" name="lastname" id="lastname" class="form-control" value="{$clientlastname}"{if in_array('lastname',$uneditablefields)} disabled="disabled" class="disabled"{/if} >
+			<div class="col-md-8" style="padding-top:20px">
+				{if $status eq "Suspended" && $suspendreason}
+				<div class="alert alert-danger">
+					<span class="glyphicon glyphicon-warning-sign"></span> <strong>{$LANG.clientareasuspended}!</strong> {$suspendreason}
 				</div>
-			</div>
-			<div class="form-group">
-				<label class="col-md-4 control-label" for="companyname">{$LANG.clientareacompanyname}</label>
-				<div class="col-md-8">
-					<input type="text" name="companyname" id="companyname" class="form-control" value="{$clientcompanyname}"{if in_array('companyname',$uneditablefields)} disabled="disabled" class="disabled"{/if} >
-				</div>
-			</div>
-			<div class="form-group">
-				<label class="col-md-4 control-label" for="email">{$LANG.clientareaemail}</label>
-				<div class="col-md-8">
-					<input type="text" name="email" id="email" class="form-control" value="{$clientemail}"{if in_array('email',$uneditablefields)} disabled="disabled" class="disabled"{/if} >
-				</div>
-			</div>
-			<div class="form-group">
-				<label class="col-md-4 control-label" for="phonenumber">{$LANG.clientareaphonenumber}</label>
-				<div class="col-md-8">
-					<input type="text" name="phonenumber" id="phonenumber" class="form-control" value="{$clientphonenumber}"{if in_array('phonenumber',$uneditablefields)} disabled="disabled" class="disabled"{/if} >
-				</div>
-			</div>
-			<div class="form-group">
-				<label class="col-md-4 control-label" for="paymentmethod">{$LANG.paymentmethod}</label>
-				<div class="col-md-8">
-					<select name="paymentmethod" id="paymentmethod" class="form-control">
-						<option value="none">{$LANG.paymentmethoddefault}</option>
-						{foreach from=$paymentmethods item=method}
-						<option value="{$method.sysname}"{if $method.sysname eq $defaultpaymentmethod} selected="selected"{/if}>{$method.name}</option>
+				{/if}
+				<div class="row">
+					<div class="col-md-6">
+						<h4>{$LANG.orderproduct}:</h4>
+						{if $groupname}{$groupname} - {/if}{$product} <span class="label label-{$rawstatus}">{$status}</span>
+						<h4>{if $type eq "hostingaccount" || $type eq "other"}{$LANG.clientareahostingdomain}{else}{$LANG.serverhostname}{/if}:</h4>
+						{if $domain}
+						<a href="http://{$domain}" target="_blank">{$domain}</a>
+						{else}
+						<div>N/A</div>
+						{/if}
+						{if $username}
+						<h4>{$LANG.serverusername}:</h4>
+						{$username}
+						{/if}
+						{if $dedicatedip}
+						<h4>{$LANG.domainregisternsip}:</h4>
+						{$dedicatedip}
+						{/if}
+						{if $lastupdate}
+						<h4>{$LANG.clientareadiskusage}:</h4>
+						{$diskusage}MB / {$disklimit}MB ({$diskpercent})
+						<h4>{$LANG.clientareabwusage}:</h4>
+						{$bwusage}MB / {$bwlimit}MB ({$bwpercent})
+						{/if}
+						{foreach from=$configurableoptions item=configoption}
+						<h4>{$configoption.optionname}:</h4>
+						{if $configoption.optiontype eq 3}
+						{if $configoption.selectedqty}{$LANG.yes}{else}{$LANG.no}{/if}
+						{elseif $configoption.optiontype eq 4}
+						{$configoption.selectedqty} &times; {$configoption.selectedoption}
+						{else}
+						{$configoption.selectedoption}
+						{/if}
 						{/foreach}
-					</select>
-				</div>
-			</div>
-			<div class="form-group">
-				<label class="col-md-4 control-label" for="billingcontact">{$LANG.defaultbillingcontact}</label>
-				<div class="col-md-8">
-					<select name="billingcid" id="billingcontact" class="form-control">
-						<option value="0">{$LANG.usedefaultcontact}</option>
-						{foreach from=$contacts item=contact}
-						<option value="{$contact.id}"{if $contact.id eq $billingcid} selected="selected"{/if}>{$contact.name}</option>
+						{foreach from=$productcustomfields item=customfield}
+						<h4>{$customfield.name}:</h4>
+						{$customfield.value}
 						{/foreach}
-					</select>
-				</div>
-			</div>
-		</div>
-		<div class="col-md-6">
-			<div class="form-group">
-				<label class="col-md-4 control-label" for="address1">{$LANG.clientareaaddress1}</label>
-				<div class="col-md-8">
-					<input type="text" name="address1" id="address1" class="form-control" value="{$clientaddress1}"{if in_array('address1',$uneditablefields)} disabled="disabled" class="disabled"{/if} >
-				</div>
-			</div>
-			<div class="form-group">
-				<label class="col-md-4 control-label" for="address2">{$LANG.clientareaaddress2}</label>
-				<div class="col-md-8">
-					<input type="text" name="address2" id="address2" class="form-control" value="{$clientaddress2}"{if in_array('address2',$uneditablefields)} disabled="disabled" class="disabled"{/if} >
-				</div>
-			</div>
-			<div class="form-group">
-				<label class="col-md-4 control-label" for="city">{$LANG.clientareacity}</label>
-				<div class="col-md-8">
-					<input type="text" name="city" id="city" class="form-control" value="{$clientcity}"{if in_array('city',$uneditablefields)} disabled="disabled" class="disabled"{/if} >
-				</div>
-			</div>
-			<div class="form-group">
-				<label class="col-md-4 control-label" for="state">{$LANG.clientareastate}</label>
-				<div class="col-md-8">
-					<input type="text" name="state" id="state" class="form-control" value="{$clientstate}"{if in_array('state',$uneditablefields)} disabled="disabled" class="disabled"{/if} >
-				</div>
-			</div>
-			<div class="form-group">
-				<label class="col-md-4 control-label" for="postcode">{$LANG.clientareapostcode}</label>
-				<div class="col-md-8">
-					<input type="text" name="postcode" id="postcode" class="form-control" value="{$clientpostcode}"{if in_array('postcode',$uneditablefields)} disabled="disabled" class="disabled"{/if} >
-				</div>
-			</div>
-			<div class="form-group">
-				<label class="col-md-4 control-label" for="country">{$LANG.clientareacountry}</label>
-				<div class="col-md-8">
-					{$clientcountriesdropdown}
-				</div>
-			</div>
-			<div class="form-group">
-				<label class="col-md-4 control-label" for="emailoptout">{$LANG.emailoptout}</label>
-				<div class="col-md-8">
-					<div class="checkbox">
-						<label for="emailoptout">
-							<input type="checkbox" value="1" name="emailoptout" id="emailoptout"{if $emailoptout} checked="checked"{/if}>
-							{$LANG.emailoptoutdesc}
-						</label>
+					</div>
+					<div class="col-md-6">
+						<h4>{$LANG.clientareahostingregdate}:</h4>
+						{$regdate}
+						<h4>{$LANG.firstpaymentamount}:</h4>
+						{$firstpaymentamount}
+						<h4>{$LANG.recurringamount}:</h4>
+						{$recurringamount}
+						<h4>{$LANG.clientareahostingnextduedate}:</h4>
+						{$nextduedate}
+						<h4>{$LANG.orderbillingcycle}:</h4>
+						{$billingcycle}
+						<h4>{$LANG.orderpaymentmethod}:</h4>
+						{$paymentmethod}
 					</div>
 				</div>
+				{if $moduleclientarea}
+				<hr>
+				<div class="moduleoutput">{$moduleclientarea|replace:'modulebutton':'btn'}</div>
+				<hr>
+				{/if}
 			</div>
 		</div>
 	</div>
 
-	{if $customfields}
-	<hr>
-	{foreach key=num item=customfield from=$customfields}
-	{if $customfield.type == "tickbox"}
-	<div class="form-group">
-		<div class="col-md-10 col-md-offset-2">
-			<div class="checkbox">
-				<label>
-					{$customfield.input} {$customfield.description}
-				</label>
+	<div class="tab-pane" id="tab-changepw">
+		<h2>{$LANG.serverchangepassword}</h2>
+		<p>{$LANG.serverchangepasswordintro}</p>
+		<form method="post" action="{$smarty.server.PHP_SELF}" class="form-horizontal" style="margin-top: 20px">
+			<input type="hidden" name="id" value="{$id}">
+			<input type="hidden" name="modulechangepassword" value="true">
+			<input type="hidden" name="action" value="productdetails">
+			<fieldset>
+				<div class="form-group">
+					<label class="col-md-6 control-label" for="password">Current login: {$username}{if $password} / {$password}{/if}</label>
+				</div>
+				<div class="form-group">
+					<label class="col-md-2 control-label" for="password">{$LANG.newpassword}</label>
+					<div class="col-md-4">
+						<input type="password" name="newpw" id="password" class="form-control">
+					</div>
+					<div class="col-md-6">
+						<span class="help-block"></span>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-md-2 control-label" for="confirmpw">{$LANG.confirmnewpassword}</label>
+					<div class="col-md-4">
+						<input type="password" name="confirmpw" id="confirmpw" class="form-control">
+					</div>
+					<div class="col-md-6">
+						<span class="help-block"></span>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-md-10 col-md-offset-2">
+						<button class="btn btn-primary">{$LANG.clientareanavchangepw}</button>
+						<button type="reset" class="btn btn-default">{$LANG.cancel}</button>
+					</div>
+				</div>
+			</fieldset>
+		</form>
+	</div>
+
+	<div class="tab-pane" id="tab-downloads">
+		<div class="row">
+			<div class="col-md-4">
+				<h2>{$LANG.downloadstitle}</h2>
+				<p>There are the following downloads associated with this product</p>
+			</div>
+			<div class="col-md-8">
+				<div class="list-group" style="margin-top:18px">
+					{foreach from=$downloads item=download}
+					<div class="list-group-item">
+						<h4 class="list-group-item-heading">{$download.title}</h4>
+						<p class="list-group-item-text">{$download.description}</p>
+						<a href="{$download.link}" title="{$LANG.downloadname} {$download.title}">{$LANG.downloadname}</a>
+					</div>
+					{/foreach}
+				</div>
 			</div>
 		</div>
 	</div>
-	{else}
-	<div class="form-group">
-		<label class="col-md-2 control-label" for="customfield{$customfield.id}">{$customfield.name}</label>
-		<div class="col-md-4">{$customfield.input}</div>
-		<div class="col-md-6">
-			<div class="form-control-static">
-				{$customfield.description}
-			</div>
-		</div>
-	</div>
-	{/if}
-	{/foreach}
-	{/if}
 
-	<div class="form-group">
-		<div class="col-md-10 col-md-offset-2">
-			<input class="btn btn-primary" type="submit" name="save" value="{$LANG.clientareasavechanges}">
-			<input class="btn btn-default" type="reset" value="{$LANG.cancel}">
-		</div>
+	<div class="tab-pane" id="tab-addons">
+		<h2>{$LANG.clientareahostingaddons}</h2>
+		<p>{$LANG.yourclientareahostingaddons}</p>
+		<table class="table table-bordered table-striped">
+			<thead>
+				<tr>
+					<th>{$LANG.clientareaaddon}</th>
+					<th>{$LANG.clientareaaddonpricing}</th>
+					<th>{$LANG.clientareahostingnextduedate}</th>
+					<th>{$LANG.clientareastatus}</th>
+				</tr>
+			</thead>
+			<tbody>
+				{foreach key=num item=addon from=$addons}
+				<tr>
+					<td>{$addon.name}</td>
+					<td>{$addon.pricing}</td>
+					<td>{$addon.nextduedate}</td>
+					<td><span class="label label-{$addon.rawstatus}">{$addon.status}</span></td>
+				</tr>
+				{foreachelse}
+				<tr>
+					<td class="text-center" colspan="4">{$LANG.clientareanoaddons}</td>
+				</tr>
+				{/foreach}
+			</tbody>
+		</table>
+		{if $addonsavailable}
+		<p class="text-center">
+			<a class="btn btn-primary" href="cart.php?gid=addons&amp;pid={$id}">{$LANG.orderavailableaddons}</a>
+		</p>
+		{/if}
 	</div>
-</form>
-
-<script type="text/javascript" src="includes/jscript/statesdropdown.js"></script>
+</div>
 
 {literal}
 <script type="text/javascript">
 	$(function() {
-		// Make custom field inputs the correct size
-		$('input[type=text]').addClass('form-control');
-		$('select').addClass('form-control');
+		// Password Strength
+		$('#password').keyup(function() {
+			$(this).parent().parent().removeClass('has-warning has-error has-success');
+			$(this).next().html("");
+			if($(this).val().length == 0) {
+				$(this).parent().next().children().html("");
+				return;
+			}
+			var pwstrength = passwordStrength($(this).val());
+			if(pwstrength > 75) {
+				$(this).parent().parent().addClass("has-success");
+				$(this).parent().next().children().html("{/literal}{$LANG.pwstrengthstrong}{literal}");
+			} else if (pwstrength > 30) {
+				$(this).parent().parent().addClass("has-warning");
+				$(this).parent().next().children().html("{/literal}{$LANG.pwstrengthmoderate}{literal}");
+			} else {
+				$(this).parent().parent().addClass("has-error");
+				$(this).parent().next().children().html("{/literal}{$LANG.pwstrengthweak}{literal}");
+			}
+			$('#confirmpw').keyup();
+		});
+		// Compare passwords
+		$('#confirmpw').keyup(function() {
+			$(this).parent().parent().removeClass('has-error has-success');
+			$(this).next().html("");
+			if($(this).val().length < 1) return;
+			if($('#password').val() != $(this).val()) {
+				$(this).parent().parent().addClass('has-error');
+				$(this).parent().next().children().html("{/literal}{$LANG.clientareaerrorpasswordnotmatch}{literal}");
+			} else {
+				$(this).parent().parent().addClass('has-success');
+				$(this).parent().next().children().html("");
+			}
+		});
 	});
 </script>
 {/literal}
