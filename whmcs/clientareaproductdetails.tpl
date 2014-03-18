@@ -130,6 +130,9 @@
 			<input type="hidden" name="action" value="productdetails">
 			<fieldset>
 				<div class="form-group">
+					<label class="col-md-6 control-label" for="password">Current login: {$LANG.serverusername} / {$LANG.serverpassword}</label>
+				</div>
+				<div class="form-group">
 					<label class="col-md-2 control-label" for="password">{$LANG.newpassword}</label>
 					<div class="col-md-4">
 						<input type="password" name="newpw" id="password" class="form-control">
