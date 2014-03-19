@@ -92,19 +92,18 @@
 		{/foreach}
 		</select>
 		<p>{$LANG.feedbackpleasecomment1} <strong>{$staff}</strong> {$LANG.feedbackhandled}.</p>
-		<textarea name="comments[{$staffid}]" rows="4" class="col-md-11">{$comments.$staffid}</textarea>
+		<textarea name="comments[{$staffid}]" rows="4" class="form-control">{$comments.$staffid}</textarea>
 	</div>
-</form>
-{/foreach}
-
-<p>{$LANG.feedbackimprove}</p>
-<textarea name="comments[generic]" rows="4" style="width:80%;">{$comments.generic}</textarea>
-
-<div class="form-actions">
-	<input class="btn btn-primary" type="submit" name="save" value="{$LANG.clientareasavechanges}">
-	<input class="btn btn-default" type="reset" value="{$LANG.cancel}">
-</div>
-
+	{/foreach}
+	
+	<div class="form-group">
+		<p>{$LANG.feedbackimprove}</p>
+		<textarea name="comments[generic]" rows="4" class="form-control">{$comments.generic}</textarea>
+	</div>
+	<div class="form-group">
+		<input class="btn btn-primary" type="submit" name="save" value="{$LANG.clientareasavechanges}">
+		<input class="btn btn-default" type="reset" value="{$LANG.cancel}">
+	</div>
 </form>
 
 {/if}
